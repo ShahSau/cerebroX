@@ -14,7 +14,7 @@ export const HeroSection = () => {
                     Where Intelligence Meets Innovation
                 </h1>
                 <p className="text-center text-xl md:text-2xl mt-6 text-zinc-400 max-w-xl mx-auto">
-                    A eading AI startup that harnesses the power of cognitive computing to create intelligent systems.
+                    A leading AI startup that harnesses the power of cognitive computing to create intelligent systems.
                 </p>
                 <div className="flex justify-center mt-10">
                     <CutCornerButton className="block mx-auto mt-12">
