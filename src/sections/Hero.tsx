@@ -1,3 +1,4 @@
+import { Circle } from "../components/Circle"
 import { CutCornerButton } from "../components/CutCornerButton"
 import { Hexagone } from "../components/Hexagone"
 
@@ -25,6 +26,27 @@ export const HeroSection = () => {
                         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                             <Hexagone className="size-[1100px]"/>
                         </div>
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <Hexagone className="size-[1800px]"/>
+                        </div>
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <Circle className="absolute left-[200px] -top-[900px]">
+                                <img src="/assets/images/cube.png" alt="Cube" className="size-[140px]"/>
+                            </Circle>
+                        </div>
+
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <Circle className="absolute left-[200px] top-[270px]">
+                                <img src="/assets/images/cuboid.png" alt="Cuboid" className="size-[140px]"/>
+                            </Circle>
+                        </div>
+
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <Circle className="absolute -left-[600px] -top[80px]">
+                                <img src="/assets/images/torus.png" alt="Torus" className="size-[140px]"/>
+                            </Circle>
+                        </div>
+
                         <img 
                             src="/assets/images/icosahedron.png" 
                             alt="" 
@@ -36,6 +58,13 @@ export const HeroSection = () => {
                             className="w-[500px]"
                         />
                     </div>
+                </div>
+
+                <div className="flex justify-center flex-col items-center mt-40 md:mt-80 gap-4">
+                    <div className="h-10 w-5 outline outline-[6px] outline-pink-500/10 inline-flex justify-center pt-2 rounded-full">
+                        <div className="h-3 w-1 rounded-full bg-pink-500"></div>
+                    </div>
+                    <p className="uppercase text-zinc-500 font-extrabold tracking-wider">Scroll to learn more</p>
                 </div>
             </div>
         </section>
