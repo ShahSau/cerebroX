@@ -11,7 +11,7 @@ export const LatestPost = (props:{
 }) => {
     const {latestPosts} = props
   return (
-    <section className="py-60 ">
+    <section className="py-52 ">
         <div className="container">
             <div className="max-w-3xl mx-auto">
                 <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">Intelligence Amplified</h2>
