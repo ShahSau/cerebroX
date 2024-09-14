@@ -4,12 +4,20 @@ import { getPostColorFromCategory } from "../utils/PostUtils"
 import { Tag } from "../components/Tag"
 import { CutCornerButton } from "../components/CutCornerButton"
 import { twMerge } from "tailwind-merge"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 
 export const LatestPost = (props:{
     latestPosts:CollectionEntry<'blog'>[]
 }) => {
     const {latestPosts} = props
+    const targetRef = useRef<HTMLDivElement>(null)
+    const {scrollYProgress}=useScroll({
+        target: targetRef,
+        offset:['start end', 'start center'],
+    })
+    const marginTop = useTransform(scrollYProgress, [0, 1], [0, 64])
   return (
     <section className="py-52 ">
         <div className="container">
@@ -20,6 +28,7 @@ export const LatestPost = (props:{
                 </p>
             </div>
             <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:mt-28">
+                {/* left side*/}
                 <div className="flex flex-col gap-8">
                     {latestPosts.map(({data:{title, description, category}}, index) => (
                         <Card 
@@ -40,7 +49,14 @@ export const LatestPost = (props:{
                     ))}
                 </div>
 
-                <div className="hidden md:flex flex-col gap-8 mt-16">
+                {/* right side */}
+                <motion.div
+                    className="hidden md:flex flex-col gap-8 mt-16" 
+                    ref={targetRef}
+                    style={{
+                        marginTop
+                    }}
+                >
                 {latestPosts.map(({data:{title, description, category}}, index) => (
                         <Card 
                             key={index} buttonText="Read More" 
@@ -58,10 +74,7 @@ export const LatestPost = (props:{
                         </Card>
                 
                     ))}
-                </div>
-            
-
-
+                </motion.div>
             </div>
 
             <div className="flex justify-center mt-48 md:mt-32">
@@ -69,7 +82,6 @@ export const LatestPost = (props:{
                     View All Posts
                 </CutCornerButton>
             </div>
-
         </div>
     </section>
   )
