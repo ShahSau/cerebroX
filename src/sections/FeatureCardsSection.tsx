@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge"
-import { TextButton } from "../components/TextButton"
 import { Card } from "../components/Card"
 import { useEffect, useState } from "react"
+
 
 
 const cardData= [
@@ -28,6 +28,18 @@ const cardData= [
     title:"Deep Learning",
     description:"Our deep learning solutions help organizations make more accurate predictions, automate processes, and optimize operations",
     color:"violet"
+  },
+  {
+    image:"/assets/images/pill.png",
+    title:"Natural Language Processing",
+    description:"Our NLP solutions help organizations understand, interpret, and generate human language in a way that is valuable to them",
+    color:"sky"
+  },
+  {
+    image:"/assets/images/cuboid.png",
+    title:"Predictive Analytics",
+    description:"Our predictive analytics solutions help organizations make more accurate predictions, automate processes, and optimize operations",
+    color:"green"
   }
 
 ]
@@ -79,7 +91,7 @@ useEffect(() => {
 
         <div className="flex justify-center mt-10">
           <div className="bg-zinc-950 inline-flex gap-4 p-2.5 rounded-full">
-            {cardData.map(({title},cardIndex) => (
+            {cardData.slice(0,cardData.length-1).map(({title},cardIndex) => (
               <div key={title} className={twMerge("size-2.5 bg-zinc-500 rounded-full cursor-pointer",
                 selectedCardIndex === cardIndex && "bg-zinc-300"
               )}

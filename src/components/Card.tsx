@@ -7,8 +7,8 @@ export const Card = (props:ComponentPropsWithoutRef<'div'> & {color?:string, but
     return (
         <div className={twMerge("relative z-0 p-8 md:p-10 group",className)}>
 
-            <div className={twMerge(`absolute size-16 rounded-xl top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transition duration-300`,color === 'pink' && 'bg-pink-500', color === 'lime' && 'bg-lime-500', color === 'cyan' && 'bg-cyan-500', color=== 'violet' && 'bg-violet-500')}></div>
-            <div className={twMerge(`absolute size-16 rounded-xl top-1.5 right-1.5 -z-10  transition duration-300`, color === 'pink' && 'bg-pink-500 group-hover:bg-pink-400', color === 'lime' && 'bg-lime-500 group-hover:bg-lime-400', color === 'cyan' && 'bg-cyan-500 group-hover:bg-cyan-400', color=== 'violet' && 'bg-violet-500 group-hover:bg-violet-400')}></div>
+            <div className={twMerge(`absolute size-16 rounded-xl top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transition duration-300`,color === 'pink' && 'bg-pink-500', color === 'lime' && 'bg-lime-500', color === 'cyan' && 'bg-cyan-500', color=== 'violet' && 'bg-violet-500', color === 'sky' && 'bg-sky-500',color==='green' && 'bg-green-500')}></div>
+            <div className={twMerge(`absolute size-16 rounded-xl top-1.5 right-1.5 -z-10  transition duration-300`, color === 'pink' && 'bg-pink-500 group-hover:bg-pink-400', color === 'lime' && 'bg-lime-500 group-hover:bg-lime-400', color === 'cyan' && 'bg-cyan-500 group-hover:bg-cyan-400', color=== 'violet' && 'bg-violet-500 group-hover:bg-violet-400', color === 'sky' && 'bg-sky-500 group-hover:bg-sky-400', color === 'green' && 'bg-green-500 group-hover:bg-green-400',)}></div>
             <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
             <div>{children}</div>
             <div className="flex justify-between mt-12">
