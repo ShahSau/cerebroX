@@ -1,20 +1,17 @@
 ---
 import { getCollection } from "astro:content"
-import InteriorContent from "../components/InteriorContent.astro"
-import InteriorHero from "../components/InteriorHero.astro"
-import DefaultLayout from "../layouts/Default.astro"
-import { Card } from "../components/Card"
-import { Tag } from "../components/Tag"
-import { getPostColorFromType,getColorFromPositionCategory } from "../utils/PostUtils"
+import InteriorContent from "../../components/InteriorContent.astro"
+import InteriorHero from "../../components/InteriorHero.astro"
+import DefaultLayout from "../../layouts/Default.astro"
+import { Card } from "../../components/Card"
+import { Tag } from "../../components/Tag"
+import { getPostColorFromType,getColorFromPositionCategory } from "../../utils/PostUtils"
 import { motion } from "framer-motion"
 
 const positions = await getCollection('positions')
 
 
-
 ---
-
-
 
 <DefaultLayout>
     <InteriorHero>
@@ -24,17 +21,15 @@ const positions = await getCollection('positions')
     </InteriorHero>
     <InteriorContent>
         <div class="flex flex-col gap-12">
-            {positions.map(({data:{title, type, description,category,remote}},index)=>(
+            {positions.map(({data:{title, type, description,category,remote},slug}, index)=>(
                 <motion.a 
                     client:load
-                    href="/contact"
+                    href={`/careers/${slug}`} 
                     key={index}
                     initial={{opacity:0, y:20}}
                     whileInView={{opacity:1, y:0}}
                     viewport={{once:true, amount:0.5}}
                     transition={{duration:0.5, ease:"easeIn"}}
-
-
                 >
                     <Card color={getColorFromPositionCategory(category)} buttonText="Apply Now">
                         <div class="flex items-center gap-3">

@@ -1,0 +1,78 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import DefaultLayout from '../../layouts/Default.astro';
+import InteriorHero from '../../components/InteriorHero.astro';
+import InteriorContent from '../../components/InteriorContent.astro';
+import { Tag } from '../../components/Tag';
+import { getColorFromPositionCategory } from '../../utils/PostUtils';
+import Input  from "../../components/Input.astro"
+import TextArea from "../../components/TextArea.astro"
+import { CutCornerButton } from "../../components/CutCornerButton"
+
+
+export async function getStaticPaths() {
+	const posts = await getCollection('positions');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'positions'>;
+
+const positions:Props = Astro.props;
+const { title, type, description, category, remote } = positions.data;
+const { Content } = await positions.render();
+
+---
+
+<DefaultLayout>
+    <InteriorHero>
+        <div class="relative">
+            <div class="flex justify-center">
+                <div class="flex items-center gap-3">
+                    {remote && (
+                        <Tag>Remote</Tag>
+                    )}
+                    <Tag color={getColorFromPositionCategory(category)}>
+                        {category}
+                    </Tag>
+                </div>
+            </div>
+            <h1 class="font-heading font-black text-5xl md:text-6xl lg:text-7xl text-center mt-4">{title}</h1>
+            <p class="text-center text-xl md:text-2xl mt-8 text-zinc-400 max-w-2xl mx-auto">{description}</p>
+        </div>
+    </InteriorHero>
+
+    <InteriorContent>
+		<div
+		 	class="prose prose-invert prose-lg mx-auto 
+				prose-zinc prose-headings:font-heading prose-headings:font-black 
+				prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:lg:text-5xl 
+				prose-h3:text-2xl prose-h3:md:text-3xl prose-h3:lg:text-4xl"
+		>
+			<Content />
+		</div>
+	</InteriorContent>
+    <div class="max-w-xl mx-auto mb-32">
+        <h2 class="font-black font-heading text-3xl">Apply now</h2>
+        <form class="flex flex-col mt-8">
+            <label for="name">Name</label>
+            <Input name="name" id="name" type="text" class="mt-1"/>
+            
+            <label for="email" class="mt-4">Email</label>
+            <Input name="email" id="email" type="email" class="mt-1"/>
+
+            <label for="message" class="mt-4">Message</label>
+            <TextArea name="message" id="message" class="mt-1"/>
+
+            <label for="position" class="mt-4">Upload your resume</label>
+            <input type="file" name="position" id="position" class="mt-4 text-center mb-4"/>
+            
+
+            <CutCornerButton type="submit" className="mt-4">Apply</CutCornerButton>
+        </form>
+    </div>
+    
+
+
+</DefaultLayout>

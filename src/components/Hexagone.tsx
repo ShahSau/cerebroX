@@ -14,7 +14,6 @@ export const Hexagone = (props:ComponentPropsWithoutRef<'svg'> &{size?:number, r
             //if(!pathLength) return;
             const scaledPathLength = (pathLength * size )/ 82;
             setTotalPathLength(scaledPathLength);
-            console.log(totalPathLength, "DDD", scaledPathLength)
         }
     }, [])
 

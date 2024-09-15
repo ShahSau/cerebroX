@@ -5,8 +5,7 @@ import InteriorHero from '../../components/InteriorHero.astro';
 import InteriorContent from '../../components/InteriorContent.astro';
 import { Tag } from '../../components/Tag';
 import { getPostColorFromCategory } from '../../utils/PostUtils';
-import { date } from 'astro:schema';
-// import BlogPost from '../../layouts/BlogPost.astro';
+
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
