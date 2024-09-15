@@ -105,7 +105,7 @@ const TestimonialsColumn = (props:{className?:string; testimonials: typeof testi
 
 export const Testimonials = () => {
   return (
-    <section className="py-4">
+    <section className="py-8">
         <div className="container">
             <div className="max-w-[540px] mx-auto">
                 <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">What our user say</h2>
