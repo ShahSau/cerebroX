@@ -7,7 +7,7 @@ slug: "how-nfts-changing-digital-ownership"
 author:
   name: "Emily Davis"
   title: "Lead Researcher - BlockLink"
-  image: "/assets/images/becky.jpg"
+  image: "/assets/images/avatar-caleb-monroe.jpg"
 ---
 
 ## Introduction to NFTs

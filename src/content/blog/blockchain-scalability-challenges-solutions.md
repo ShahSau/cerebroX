@@ -7,7 +7,7 @@ slug: "blockchain-scalability-challenges-solutions"
 author:
   name: "Alice Monroe"
   title: "Blockchain Analyst - ChainWave"
-  image: "/assets/images/alice.jpg"
+  image: "/assets/images/avatar-molly-vaughan.jpg"
 ---
 
 ## Understanding Blockchain Scalability

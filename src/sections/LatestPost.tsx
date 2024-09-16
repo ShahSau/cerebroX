@@ -78,9 +78,11 @@ export const LatestPost = (props:{
             </div>
 
             <div className="flex justify-center mt-48 md:mt-32">
-                <CutCornerButton>
-                    View All Posts
-                </CutCornerButton>
+                <a href="/blog">
+                    <CutCornerButton>
+                        View All Posts
+                    </CutCornerButton>
+                </a>
             </div>
         </div>
     </section>

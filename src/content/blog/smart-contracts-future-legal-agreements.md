@@ -7,7 +7,7 @@ slug: "smart-contracts-future-legal-agreements"
 author:
   name: "John Smith"
   title: "Sr. Developer - BlockWorld"
-  image: "/assets/images/john.jpg"
+  image: "/assets/images/avatar-caleb-monroe.jpg"
 ---
 
 ## Introduction to Smart Contracts

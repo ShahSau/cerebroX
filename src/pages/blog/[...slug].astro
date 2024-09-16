@@ -15,9 +15,9 @@ export async function getStaticPaths() {
 	}));
 }
 type Props = CollectionEntry<'blog'>;
-
+console.log(Astro.props);
 const post:Props = Astro.props;
-const { category, title, description, author:{name, title:authorTitle} } = post.data;
+const { category, title, description, author:{name, title:authorTitle,image} } = post.data;
 const { Content } = await post.render();
 ---
 
@@ -34,7 +34,7 @@ const { Content } = await post.render();
 			<div class="flex flex-col items-center mt-8">
 
 				<div class="size-16 rounded-full bg-zinc-700 bg-cover bg-center">
-
+					<img src={image} alt="Author" class="rounded-full">
 				</div>
 
 				<div class="font-extrabold text-lg mt-3">

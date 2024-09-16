@@ -55,7 +55,7 @@ const { Content } = await positions.render();
 	</InteriorContent>
     <div class="max-w-xl mx-auto mb-32">
         <h2 class="font-black font-heading text-3xl">Apply now</h2>
-        <form class="flex flex-col mt-8">
+        <form class="flex flex-col mt-8" name="job" method="POST" data-netlify="true">
             <label for="name">Name</label>
             <Input name="name" id="name" type="text" class="mt-1"/>
             

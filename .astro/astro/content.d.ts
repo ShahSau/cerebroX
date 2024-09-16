@@ -141,16 +141,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"blockchain-in-healthcare-new-frontier.md": {
-	id: "blockchain-in-healthcare-new-frontier.md";
-  slug: "blockchain-in-healthcare-new-frontier";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"blockchain-interoperability-connecting-networks.md": {
-	id: "blockchain-interoperability-connecting-networks.md";
-  slug: "blockchain-interoperability-connecting-networks";
+"ai-in-healthcare.md": {
+	id: "ai-in-healthcare.md";
+  slug: "ai-in-healthcare";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -183,9 +176,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"future-of-ai.md": {
+	id: "future-of-ai.md";
+  slug: "future-of-ai";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "how-nfts-changing-digital-ownership.md": {
 	id: "how-nfts-changing-digital-ownership.md";
   slug: "how-nfts-changing-digital-ownership";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"raise-of-ai-in-content-creation.md": {
+	id: "raise-of-ai-in-content-creation.md";
+  slug: "raise-of-ai-in-content-creation";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -200,13 +207,6 @@ declare module 'astro:content' {
 "smart-contracts-future-legal-agreements.md": {
 	id: "smart-contracts-future-legal-agreements.md";
   slug: "smart-contracts-future-legal-agreements";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"tokenomics-understanding-blockchain-economics.md": {
-	id: "tokenomics-understanding-blockchain-economics.md";
-  slug: "tokenomics-understanding-blockchain-economics";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

@@ -7,7 +7,7 @@ slug: "blockchain-security-protecting-digital-assets"
 author:
   name: "John Smith"
   title: "Sr. Developer - BlockWorld"
-  image: "/assets/images/john.jpg"
+  image: "/assets/images/avatar-noel-baldwin.jpg"
 ---
 
 ## Understanding the Basics of Blockchain Security
