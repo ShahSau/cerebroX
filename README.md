@@ -40,7 +40,6 @@
 > - [🛠 Project Roadmap](#🛠-project-roadmap)
 > - [📄 License](#📄-license)
 
-
 ---
 
 ## 📍 Overview
