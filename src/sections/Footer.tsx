@@ -43,10 +43,10 @@ export const  Footer=()=> {
                 <img src='/assets/images/logo.png' alt='logo' className='w-24'/>
                 </div>
                 <nav className='hidden md:flex text-zinc-500 font-heading font-black  gap-12'>
-                    <a href='#' className=''>Home</a>
-                    <a href='#' className=''>Blog</a>
-                    <a href='#' className=''>Careers</a>
-                    <a href='#' className=''>Contact</a>
+                    <a href='/' className=''>Home</a>
+                    <a href='/blog' className=''>Blog</a>
+                    <a href='/careers' className=''>Careers</a>
+                    <a href='/contact' className=''>Contact</a>
                 </nav>
             </div>
 
